@@ -1,0 +1,246 @@
+<!-- <!DOCTYPE html> -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="./css/style.css" >
+    <script src="https://cdn.tailwindcss.com"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <style>
+        body{
+            padding: 4px;
+        }
+    </style>
+    <title>PORTFOLIO</title>
+</head>
+<body class="font-nonito ">
+    <!-- into section -->
+    <div id="homepage" class=" h-1/2 lg:h-screen bg-gradient-to-t from-red-400  to bg-indigo-400 relative overflow-hidden ">
+       
+        <!-- navbar -->
+        <nav class="w-full fixed top-0 bg-white z-10">
+            <div class="container mx-auto items-center py-5 flex justify-between">
+                <div class="flex items-center gap-2 ">
+                    <!-- <img class="w-18" src="" alt=""> -->
+                    <span class="text-2xl font-bold text-slate-900 dark:text-white">SACHIN MISHRA</span>
+                </div>
+                <ul class="hidden md:flex space-x-10 text-gray-900 dark:text-gray-50 font-bold md:text-sm  uppercase ">
+                    <li class="hover:text-gray-500">
+                        <a href="#homepage">homepage</a>
+                    </li>
+                    <li class="hover:text-gray-500">
+                        <a href="#about">about Me</a>
+                    </li>
+                    <li class="hover:text-gray-500">
+                        <a href="#services">Services</a>
+                    </li>
+                    <li class="hover:text-gray-500">
+                        <a href="#works">works</a>
+                    </li>
+                    <li class="hover:text-gray-500">
+                        <a href="#contact">Contact</a>
+                    </li>
+                </ul>
+                <img class="w-5 cursor-pointer hidden md:block" src="./img/dark.png" alt="">
+                <div id="hamburger" class="space-y-1 md:hidden cursor-pointer z-20">
+                    <div class="w-6 h-0.5 bg-black"></div>
+                    <div class="w-6 h-0.5 bg-black"></div>
+                    <div class="w-6 h-0.5 bg-black"></div>
+                </div>
+                <ul id="menu" class="hidden bg-slate-900 absolute left-0 w-full top-0 p-10 rounded-b-3xl space-y-10  text-white text-center">
+                    <li>
+                        <a id="hlink" href="#homepage">HOMEPAGE</a>
+                    </li>
+                    <li >
+                        <a id="hlink" href="#about">ABOUT ME</a>
+                    </li>
+                    <li >
+                        <a id="hlink" href="#services">SERVICES</a>
+                    </li>
+                    <li >
+                        <a id="hlink" href="#works">WORKS & PROJECTS</a>
+                    </li>
+                    <li >
+                        <a id="hlink" href="#contact">CONTACT</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!-- intro contact -->
+        <!-- image -->
+        <img class="absolute bottom-0 right-0 lg:left-0 mx-auto h-5/6 object-cover overflow-hidden" src="./img/man.jpg" alt="">
+        <!--  circle -->
+        <div  class="hidden lg:block absolute -botton-1/4 right-0 left-0  w-big h-big bg-indigo-900 rounded-full"></div>
+        <div class="absolute top-1/3 left-3 text-xl sm:left-5 sm:text-4xl md:left-1/5 md:gap-2  md:text-6xl lg-left-5 xl-left-48 xl-text-7xl font-bold ">
+            <span class="text-gray-700">Freelance</span>
+            <p id="text" class="text-white-500"></p>
+        </div>
+        <div  class=" hidden lg:flex  flex-col gap-5 rounded-xl shadow-xl shadow-gray-800 absolute top-0 bottom-0 m-auto right-10 bg-white p-5 h-fit w-1/4 ">
+            <h1 class="text-2xl font-bold text-indigo-900">Hii, I'm Sachin</h1>
+            <p  class="text-gray-800 text-sm p-2">Im sachin Mishra, pursuing B.Tech in computer science from Government engineering College Raipur.I'm a web developer having proper knowledge of Frontend and backend with Javascript.</p>
+            <a   class="bg-indigo-500  text-white text-lg p-2 rounded-md font-semibold  w-fit" href="">HIDE ME</a>
+        </div>
+    </div>
+    <!-- about section -->
+        <div id="about" class="bg-gradient-to-t from-indigo-300  to bg-red-400 relative overflow-hidden  mx-auto py-40 flex flex-col-reverse lg:flex-row items-center p-3 gap-20">
+        <!-- left side -->
+            <div class="ralative">
+                <div class="h-full rounded-full overflow-hidden">
+                    <img class="" src="./img/man.jpg" alt="">
+                </div>
+            </div>
+            <!-- right side -->
+            <div class="my-auto flex flex-col gap-3">
+                <h1 class="text-indigo-800 font-bold">ABOUT ME</h1>
+                <h1 class="text-3xl font-medium">DEVELOPING &</h1>
+                <h1 class="text-3xl font-medium">PROGRAMMING</h1>
+                <h1 class="text-3xl font-medium">SKILLS</h1>
+                <p class="text-black font-bold">I design and build digital products., <br> I'm multi-disciplinary maker and working with different skills in wide range of design disciplines.
+
+                </p>
+                <h2 class="text-slate-700 font-bold ">HTML</h2>
+                <div class="w-full bg-gray-400 h-1.5 rounded-md">
+                    <div class="w-full bg-indigo-600 h-1.5 rounded-md"></div>
+                </div>
+                <h2 class="text-slate-700 font-bold ">Tailwind CSS</h2>
+                <div class="w-full bg-gray-400 h-1.5 rounded-md">
+                    <div class="w-3/4 bg-indigo-600 h-1.5 rounded-md"></div>
+                </div>
+                <h2 class="text-slate-700 font-bold">JAVASCRIPT</h2>
+                <div class="w-full bg-gray-400 h-1.5 rounded-md">
+                    <div class="w-4/6 bg-indigo-600 h-1.5 rounded-md"></div>
+                </div>
+                <h2 class="text-slate-700 font-bold ">REACT JS</h2>
+                <div class="w-full bg-gray-400 h-1.5 rounded-md">
+                    <div class="w-1/4 bg-indigo-600 h-1.5 rounded-md"></div>
+                </div>
+            </div>
+        </div>
+       <!-- services -->
+    <div id="services" >
+        <div class="container mx-auto"></div>
+        <!-- top -->
+        <div class="flex flex-col gap-3 items-center  ">
+            <h1 class="text-slate-900 font-bold text-2xl ">SERVICES</h1>
+            <h1 class= "text-3xl ">What do I Offer</h1>
+            <p class="w-1/2 text-center text-gray-500">My approach to website is to create a website that strengthens your company's brand while ensuring ease of use and simplicity for your audience. 
+            </p>
+        </div>
+        <!-- bottom -->
+        <div class="p-5 sm:p-0 flex flex-wrap flex-row justify-between">
+            <!-- card -->
+            <div class="w-full md:w-4/12 shadow-2xl rounded-lg p-5 my-3 md:my-10 flex flex-col gap-3">
+                <img class="w-10" src="./img/front.jpg" alt="">
+                <h1 class="font-medium text-lg">Frontend Website</h1>
+                <p class="teaxt-gray-400">For basic portfolio of your work,one can have this web page serevice.</p>
+                <a class="text-indigo-600 font-semibold text-sm" href="">read more</a>
+            </div>
+            <div class="w-full md:w-4/12 shadow-2xl rounded-lg p-5 my-3 md:my-10 flex flex-col gap-3">
+                <img class="w-10" src="./img/full.jpg" alt="">
+                <h1 class="font-medium text-lg">Full stack Website</h1>
+                <p class="teaxt-gray-400">Creating and managing Frontend plus backend support web pages.</p>
+                <a class="text-indigo-600 font-semibold text-sm" href="">read more</a>
+            </div>
+            <div class="w-full md:w-4/12 shadow-2xl rounded-lg p-5 my-3 md:my-10 flex flex-col gap-3">
+                <img class="w-10" src="./img/back.jpg" alt="">
+                <h1 class="font-medium text-lg">Backend support</h1>
+                <p class="teaxt-gray-400">One can have a backend support facility for management of backend and response giving website.</p>
+                <a class="text-indigo-600 font-semibold text-sm" href="">read more</a>
+            </div>
+            <div class="w-full md:w-4/12 shadow-2xl rounded-md p-5 my-3 md:my-10 flex flex-col gap-3">
+                <img class="w-10" src="./img/ui.png" alt="">
+                <h1 class="font-medium text-lg">UI & Designs</h1>
+                <p class="teaxt-gray-400">Providing UI and designs to the users for better growth of a website.</p>
+                <a class="text-indigo-600 font-semibold text-sm" href="">read more</a>
+            </div>
+        </div>
+    </div>
+    <!-- portfolio -->
+    <div id="works" class="py-40 ">
+        <div class="container mx-auto"></div>
+        <!-- top -->
+        <div class="flex flex-col items-center gap-3">
+            <h1 class="text-slate-900 font-bold ">PORTFOLIO</h1>
+            <h1 class="text-slate-900 font-bold ">WORKS AND PROJECTS</h1>
+            <p class="w-1/2 text-center text-gray-600">Not an expericend one but few projects with quality and contextual basis.These are some projects developed by me.
+            </p>
+        </div>
+        <!-- bottom -->
+        <div class="p-15 px-20  sm:p-0 flex flex-wrap justify-between">
+            <!-- card -->
+            <div class="w-full md:w-4/12 lg:w-1/5 h-fit shadow-xl rounded-lg my-3 md:my-10 m-1 ">
+                <img class="w-18" src="./img/icon.png" alt="">
+                <h1 class="font-medium text-lg ">PORTFOLIO</h1>
+                <a class="bg-indigo-500  text-white  p-2 rounded-md text-sm  w-fit" href="">VIEW</a>
+            </div>
+            <div class="w-full md:w-4/12 lg:w-1/5 h-fit shadow-xl rounded-lg my-3 md:my-10 m-1 ">
+                <img class="w-18" src="./img/icon.png" alt="">
+                <h1 class="font-medium text-lg">NSS GECR Web</h1>
+                <a class="bg-indigo-500  text-white  p-2 rounded-md text-sm  w-fit" href="https://imsachin010.github.io/GECR_NSS.github.io/">VIEW</a>
+            </div>
+            <div class="w-full md:w-4/12 lg:w-1/5 h-fit shadow-xl rounded-lg my-3 md:my-10 m-1 ">
+                <img class="w-18" src="./img/icon.png" alt="">
+                <h1 class="font-medium text-lg">PROJECT 3</h1>
+                <a class="bg-indigo-500  text-white  p-2 rounded-md text-sm  w-fit" href="">VIEW</a>
+            </div>
+            <div class="w-full md:w-4/12 lg:w-1/5 h-fit shadow-xl rounded-lg my-3 md:my-10 m-1 ">
+                <img class="w-18" src="./img/icon.png" alt="">
+                <h1 class="font-medium text-lg">PROJECT 4</h1>
+                <a class="bg-indigo-500  text-white  p-2 rounded-md text-sm  w-fit" href="">VIEW</a>
+            </div>
+        </div>
+    </div>
+    <!-- contact -->
+    <div id="contact">
+        <div class="container mx-auto">
+            <!-- top -->
+            <div class="flex flex-col items-center gap-3">
+                <h1 class="text-slate-900 font-bold ">CONTACT</h1>
+                <h1 class="text-slate-900 font-bold ">ASK ME!!</h1>
+                <p class="w-1/2 text-center text-gray-500">Contact Me on Social Media links given below.
+                </p>
+            </div>
+            <!-- bottom -->
+            <form class="flex flex-col gap-5 items-center mt-5 p-8">
+                <input class="p-2 w-full md:w-1/2 ring-1 ring-indigo-400 rounded-sm " type="text" placeholder="Your name">
+                <input class="p-2 w-full md:w-1/2 ring-1 ring-indigo-400 rounded-sm " type="email" placeholder="Email">
+                <textarea class="p-2 w-full md:w-1/2 ring-1 ring-indigo-400 rounded-sm " name="" id="" cols="30" rows="10" placeholder="Message..."></textarea>
+                <button class="w-1/2 bg-slate-800 text-white font-medium px-3 py-2  cursor-pointer rounded-md hover:bg-black">Submit</button>
+            </form>
+
+        </div>
+    </div>
+    <!-- footer   -->
+    <div class="w-full bg-gray-800">
+        
+        <div class="container mx-auto items-center py-5 flex justify-between">
+            <div class="flex items-center gap-2 ">
+                <span class="text-2xl font-bold text-white">SACHIN MISHRA</span>
+            </div>
+            <span class=" hidden md:block font-medium text-white">
+                Designed by Sachin Mishra
+            </span>
+            <div class="flex gap-8">
+                <a class="w-7 cursor-pointer" href="https://mailto:007mishrasachinmishra@gmail.com">
+                    <img src="./img/mail.png" alt="">
+                </a>
+                <a href="https://github.com/Imsachin010">
+                    <img class="w-7 cursor-pointer" src="./img/github.png" alt="">
+                </a>
+                <a href="www.linkedin.com/in/sachinmishra010">
+                    <img class="w-7 cursor-pointer" src="./img/linkedin.png" alt="">
+                </a>
+                <a href="">
+                    <img class="w-7 cursor-pointer" src="./img/twitter.png" alt="">
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    <script src="./app.js"></script>
+    <script src="./css/autotyping.js"></script>
+</body>
+</html>
