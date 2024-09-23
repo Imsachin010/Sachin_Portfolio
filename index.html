@@ -21,52 +21,60 @@
     <div id="homepage" class=" h-1/2 lg:h-screen bg-gradient-to-t from-red-400  to bg-indigo-400 relative overflow-hidden ">
        
         <!-- navbar -->
-        <nav class="w-full fixed top-0 bg-white z-10">
+        <nav class="w-full fixed top-0 bg-white z-20 shadow-md">
             <div class="container mx-auto items-center py-5 flex justify-between">
-                <div class="flex items-center gap-2 ">
-                    <!-- <img class="w-18" src="" alt=""> -->
-                    <span class="text-2xl font-bold text-slate-900 ">SACHIN MISHRA</span>
+                <!-- Logo and Title -->
+                <div class="flex items-center gap-2">
+                    <span class="text-2xl font-bold text-slate-900">SACHIN MISHRA</span>
                 </div>
-                <ul class="hidden md:flex space-x-10 text-gray-900 font-bold md:text-sm  uppercase ">
+        
+                <!-- Desktop Navigation -->
+                <ul class="hidden md:flex space-x-10 text-gray-900 font-bold md:text-sm uppercase">
                     <li class="hover:text-gray-500">
-                        <a href="#homepage">home</a>
+                        <a href="#homepage">Home</a>
                     </li>
                     <li class="hover:text-gray-500">
-                        <a href="#about">about Me</a>
+                        <a href="#about">About Me</a>
                     </li>
                     <li class="hover:text-gray-500">
                         <a href="#services">Services</a>
                     </li>
                     <li class="hover:text-gray-500">
-                        <a href="#works">works</a>
+                        <a href="#works">Works</a>
                     </li>
                     <li class="hover:text-gray-500">
                         <a href="#contact">Contact</a>
                     </li>
                 </ul>
-                <a href="https://github.com/Imsachin010">
-                    <img class="w-7 rounded-full cursor-pointer" src="./img/github.png" alt="">
+        
+                <!-- GitHub Icon -->
+                <a href="https://github.com/Imsachin010" aria-label="GitHub">
+                    <img class="w-7 rounded-full cursor-pointer" src="./img/github.png" alt="GitHub">
                 </a>
+        
+                <!-- Hamburger Menu (Mobile) -->
                 <div id="hamburger" class="space-y-1 md:hidden cursor-pointer z-20">
                     <div class="w-6 h-0.5 bg-black"></div>
                     <div class="w-6 h-0.5 bg-black"></div>
                     <div class="w-6 h-0.5 bg-black"></div>
                 </div>
-                <ul id="menu" class="hidden bg-slate-900 absolute left-0 w-full top-0 p-10 rounded-b-3xl space-y-10  text-white text-center">
+        
+                <!-- Mobile Menu -->
+                <ul id="menu" class="hidden bg-slate-900 absolute left-0 w-full top-0 p-10 rounded-b-3xl space-y-8 text-white text-center transition-all duration-300 ease-in-out">
                     <li>
-                        <a id="hlink" href="#homepage">HOME</a>
+                        <a class="hover:text-gray-400" href="#homepage">Home</a>
                     </li>
-                    <li >
-                        <a id="hlink" href="#about">ABOUT ME</a>
+                    <li>
+                        <a class="hover:text-gray-400" href="#about">About Me</a>
                     </li>
-                    <li >
-                        <a id="hlink" href="#services">SERVICES</a>
+                    <li>
+                        <a class="hover:text-gray-400" href="#services">Services</a>
                     </li>
-                    <li >
-                        <a id="hlink" href="#works">WORKS & PROJECTS</a>
+                    <li>
+                        <a class="hover:text-gray-400" href="#works">Works & Projects</a>
                     </li>
-                    <li >
-                        <a id="hlink" href="#contact">CONTACT</a>
+                    <li>
+                        <a class="hover:text-gray-400" href="#contact">Contact</a>
                     </li>
                 </ul>
             </div>
@@ -138,7 +146,7 @@
                 
             </div>
         </div>
-       <!-- services -->
+    <!-- services -->
     <div id="services" class="py-5" >
         <div class="container mx-auto"></div>
         <!-- top -->
@@ -178,40 +186,42 @@
         </div>
     </div>
     <!-- portfolio -->
-    <div id="works" class="py-30 ">
-        
+    <div id="works" class="py-20">
         <!-- top -->
-        <div class="flex flex-col items-center gap-3">
-            <h1 class="text-slate-900 font-bold text-2xl ">PORTFOLIO</h1>
-            <h1 class="text-slate-900 font-bold ">WORKS AND PROJECTS</h1>
-            <p class="w-1/2 text-center text-gray-600">Not an expericend one but few projects with quality and contextual basis.These are some projects developed by me.
-            </p>
+        <div class="flex flex-col items-center gap-3 mb-10">
+            <h1 class="text-slate-900 font-bold text-3xl md:text-4xl">PORTFOLIO</h1>
+            <h2 class="text-slate-900 font-bold text-xl md:text-2xl">WORKS AND PROJECTS</h2>
+            <p class="w-11/12 sm:w-3/4 lg:w-1/2 text-center text-gray-600">Not an experienced one, but here are a few quality projects developed by me, focusing on contextual and functional design.</p>
         </div>
-        <!-- bottom -->
-        <div class="p-15 px-20  sm:p-0 flex flex-wrap justify-between">
-            <!-- card -->
-            <div class="w-full h-fit md:w-4/12 lg:w-1/5 shadow-2xl rounded-md my-3 md:my-10 mx-auto ">
-                <img class="w-24 h-24 rounded-full" src="./img/man.jpg" alt="">
-                <h1 class="font-medium text-lg ">PORTFOLIO</h1>
-                <a class="bg-indigo-500  text-white  p-2 rounded-md text-sm  w-fit h-fit" href="">View</a>
+        <!-- bottom (projects) -->
+        <div class="p-5 flex flex-wrap justify-center gap-5">
+            <!-- card 1 -->
+            <div class="w-full sm:w-5/12 md:w-3/12 lg:w-1/5 shadow-lg rounded-lg p-5 flex flex-col items-center text-center">
+                <img class="w-20 h-20 rounded-full mb-3" src="./img/man.jpg" alt="Portfolio">
+                <h1 class="font-semibold text-lg">PORTFOLIO</h1>
+                <a class="bg-indigo-500 text-white px-4 py-2 rounded-md text-sm mt-4 hover:bg-indigo-600 transition-all" href="">View</a>
             </div>
-            <div class="w-full md:w-4/12 lg:w-1/5 h-fit shadow-xl rounded-lg my-3 md:my-10 m-1 ">
-                <img class="w-24 h-24 rounded-full" src="./img/logo.png" alt="">
-                <h1 class="font-medium text-lg">Gec Raipur NSS Website</h1>
-                <a class="bg-indigo-500  text-white  p-2 rounded-md text-sm  w-fit" href="https://gecrnss.github.io/NSS/">View</a>
+            <!-- card 2 -->
+            <div class="w-full sm:w-5/12 md:w-3/12 lg:w-1/5 shadow-lg rounded-lg p-5 flex flex-col items-center text-center">
+                <img class="w-20 h-20 rounded-full mb-3" src="./img/logo.png" alt="Gec Raipur NSS Website">
+                <h1 class="font-semibold text-lg">Gec Raipur NSS Website</h1>
+                <a class="bg-indigo-500 text-white px-4 py-2 rounded-md text-sm mt-4 hover:bg-indigo-600 transition-all" href="https://gecrnss.github.io/NSS/">View</a>
             </div>
-            <div class="w-full md:w-4/12 lg:w-1/5 h-fit shadow-xl rounded-lg my-3 md:my-10 m-1 ">
-                <img class="w-24 h-24 rounded-full" src="./img/icon.png" alt="">
-                <h1 class="font-medium text-lg">PROJECT 3</h1>
-                <a class="bg-indigo-500  text-white  p-2 rounded-md text-sm  w-fit" href="">View</a>
+            <!-- card 3 -->
+            <div class="w-full sm:w-5/12 md:w-3/12 lg:w-1/5 shadow-lg rounded-lg p-5 flex flex-col items-center text-center">
+                <img class="w-20 h-20 rounded-full mb-3" src="./img/icon.png" alt="Project 3">
+                <h1 class="font-semibold text-lg">PROJECT 3</h1>
+                <a class="bg-indigo-500 text-white px-4 py-2 rounded-md text-sm mt-4 hover:bg-indigo-600 transition-all" href="">View</a>
             </div>
-            <div class="w-full md:w-4/12 lg:w-1/5 h-fit shadow-xl rounded-lg my-3 md:my-10 m-1 ">
-                <img class="w-24 h-24 rounded-full" src="./img/icon.png" alt="">
-                <h1 class="font-medium text-lg">PROJECT 4</h1>
-                <a class="bg-indigo-500  text-white  p-2 rounded-md text-sm  w-fit" href="">View</a>
+            <!-- card 4 -->
+            <div class="w-full sm:w-5/12 md:w-3/12 lg:w-1/5 shadow-lg rounded-lg p-5 flex flex-col items-center text-center">
+                <img class="w-20 h-20 rounded-full mb-3" src="./img/icon.png" alt="Project 4">
+                <h1 class="font-semibold text-lg">PROJECT 4</h1>
+                <a class="bg-indigo-500 text-white px-4 py-2 rounded-md text-sm mt-4 hover:bg-indigo-600 transition-all" href="">View</a>
             </div>
         </div>
     </div>
+    
     <!-- contact -->
     <div id="contact" class="py-5">
         <div class="container mx-auto">
