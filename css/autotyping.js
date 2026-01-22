@@ -117,9 +117,9 @@ var AutoTyping = (function (e) {
       };
     },
   ]).default;
-  
-  
-  const exampleText = ['Developer', 'Programmer', 'Desingner'];
+
+
+  const exampleText = ['Neural Architect', 'Programmer', 'Algorithmic Researcher'];
   const exampleTyping = new AutoTyping('#text', exampleText, {
       typeSpeed: 100,
       deleteSpeed: 100,

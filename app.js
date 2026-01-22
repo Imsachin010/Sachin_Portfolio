@@ -55,20 +55,54 @@ window.addEventListener('resize', () => {
 // Toggle intro card functionality
 const toggleSection = document.querySelector("#toggleSection");
 const toggleButton = document.querySelector("#toggleButton");
+const toggleFloatingButton = document.querySelector("#toggleFloatingButton");
 
-if (toggleButton && toggleSection) {
+function toggleIntroCard() {
+    if (!toggleSection || !toggleButton || !toggleFloatingButton) {
+        console.error("Toggle elements not found");
+        return;
+    }
+    
+    // Toggle display using inline styles for reliable toggling
+    const cardIsVisible = toggleSection.style.display !== "none";
+    
+    if (cardIsVisible) {
+        // Hide card, show button
+        toggleSection.style.display = "none";
+        toggleFloatingButton.style.display = "block";
+        toggleButton.textContent = "SHOW ME";
+    } else {
+        // Show card, hide button
+        toggleSection.style.display = "flex";
+        toggleFloatingButton.style.display = "none";
+        toggleButton.textContent = "HIDE ME";
+    }
+}
+
+// Ensure elements exist before adding listeners
+if (toggleButton && toggleSection && toggleFloatingButton) {
+    // Make buttons clickable
+    toggleButton.style.cursor = "pointer";
+    toggleFloatingButton.style.cursor = "pointer";
+    
     toggleButton.addEventListener("click", (e) => {
         e.preventDefault();
-        // Toggle the 'hidden' class on the section
-        toggleSection.classList.toggle("hidden");
-        
-        // Change the button text depending on the visibility
-        if (toggleSection.classList.contains("hidden")) {
-            toggleButton.textContent = "SHOW ME";
-        } else {
-            toggleButton.textContent = "HIDE ME";
-        }
+        e.stopPropagation();
+        toggleIntroCard();
     });
+    
+    toggleFloatingButton.addEventListener("click", (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        toggleIntroCard();
+    });
+    
+    console.log("Toggle functionality initialized successfully");
+} else {
+    console.warn("Toggle functionality could not be initialized. Some elements are missing.");
+    if (!toggleButton) console.warn("toggleButton not found");
+    if (!toggleSection) console.warn("toggleSection not found");
+    if (!toggleFloatingButton) console.warn("toggleFloatingButton not found");
 }
 
 // Projects Carousel Scroll Functionality
