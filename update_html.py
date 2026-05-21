@@ -1,4 +1,30 @@
-<!DOCTYPE html>
+import re
+
+with open('index.html', 'r', encoding='utf-8') as f:
+    text = f.read()
+
+# Replace <head> to body start
+head_new = """<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./modern.css">
+    <title>Sachin Mishra | Portfolio</title>
+</head>
+<body>
+    <div class="background-glow"></div>
+"""
+text = re.sub(r'<html.*?>.*?<body.*?>', head_new, text, flags=re.DOTALL | re.IGNORECASE)
+text = text.replace('<!-- <!DOCTYPE html> -->\n', '')
+
+# Extract body contents basically from original if we must, but we can do string replace.
+# Just rewrite index.html directly by reading the full text, extracting data, and writing a new template.
+import os
+
+html_template = """<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -14,17 +40,17 @@
     <header class="site-header">
         <div class="container nav-wrap">
             <a href="#homepage" class="brand">
-                <span class="brand-text">Sachin Mishra</span>
+                <span class="brand-badge">SM</span>
+                <span class="brand-text">SACHIN MISHRA</span>
             </a>
             <nav class="desktop-nav">
                 <a href="#homepage">Home</a>
                 <a href="#about">About</a>
-                <a href="./publications.html">Publications</a>
-                <a href="#works">Projects</a>
+                <a href="#publications">Publications</a>
+                <a href="#works">Works</a>
                 <a href="#contact">Contact</a>
-                <a href="https://scholar.google.com/citations?user=acsumE0AAAAJ&hl=en" target="_blank" class="nav-external">Google Scholar</a>
-                <a href="./resume/Sachin_MSR.pdf" download>Resume</a>
             </nav>
+            <a href="./resume/Sachin_MSR.pdf" download class="resume-btn">Resume</a>
             <button id="menuToggle" class="menu-toggle" aria-label="Toggle menu">
                 <span></span><span></span><span></span>
             </button>
@@ -34,11 +60,10 @@
     <nav id="mobileMenu" class="mobile-nav">
         <a href="#homepage">Home</a>
         <a href="#about">About</a>
-        <a href="./publications.html">Publications</a>
-        <a href="#works">Projects</a>
+        <a href="#publications">Publications</a>
+        <a href="#works">Works</a>
         <a href="#contact">Contact</a>
-        <a href="https://scholar.google.com/citations?user=acsumE0AAAAJ&hl=en" target="_blank">Google Scholar</a>
-        <a href="./resume/Sachin_MSR.pdf" download>Download Resume</a>
+        <a href="./resume/Sachin_MSR.pdf" download style="color: #2dd4bf; text-decoration: underline;">Download Resume</a>
     </nav>
 
     <main>
@@ -46,17 +71,16 @@
         <section id="homepage" class="container section hero reveal">
             <div class="hero-content">
                 <p class="eyebrow">Research Scholar</p>
-                <h1><span class="accent"> AI & Machine Learning Systems, Gen Models</span> &amp; Optimization</h1>
-                <p class="hero-sub">Research Scholar, International Institute of Information Technology Bangalore · India AI Fellow | GOI</p>
+                <h1><span class="accent">AI, Gen Models</span> &amp; Optimization</h1>
                 <p class="hero-text" id="typewriter">optimization insight</p>
                 <div class="hero-actions">
-                    <a href="#publications" class="btn btn-primary">View My Work</a>
-                    <div class="pill-row" aria-label="Contact and social links">
-                        <a href="#contact" class="pill pill-link">Contact</a>
-                        <a href="https://github.com/Imsachin010" target="_blank" class="pill pill-link">GitHub</a>
-                        <a href="https://www.linkedin.com/in/sachinmishra010" target="_blank" class="pill pill-link">LinkedIn</a>
-                    </div>
+                    <a href="#works" class="btn btn-primary">View My Work</a>
+                    <a href="#contact" class="btn btn-ghost">Contact Me</a>
                 </div>
+                <ul class="social-list">
+                    <li><a href="https://github.com/Imsachin010" target="_blank">GitHub</a></li>
+                    <li><a href="https://www.linkedin.com/in/sachinmishra010" target="_blank">LinkedIn</a></li>
+                </ul>
             </div>
             <div class="hero-media">
                 <img src="./img/man.jpg" alt="Profile Image">
@@ -104,21 +128,43 @@
         <section id="publications" class="container section reveal">
             <div class="section-title-wrap">
                 <p class="eyebrow">Research</p>
-                <h1>Selected Publications <a class="section-link" href="./publications.html"> [ Visit all Papers &rarr;]</a></h1>
+                <h2>Publications</h2>
             </div>
             <div class="cards-grid publication-grid">
-
+                
                 <article class="card">
-                    <div class="meta">SIGMOD/PODS 2026 A* Conference</div>
-                    <h3>Reliability-Aware Structured Synthetic Data Generation via Schema Enforcement and Layered Repair</h3>
-                    <p>Sachin Mishra. 2026. Reliability-Aware Structured Synthetic Data Generation via Schema Enforcement and Layered Repair. In Workshop on Synthetic Data Generation and Management for Building AI Systems (SynthAI '26), May 31-June 05, 2026, Bengaluru, India. ACM, New York, NY, USA, 6 pages.</p>
-                    <a href="https://doi.org/10.1145/3814574.3816747" target="_blank">Read Paper &rarr;</a>
+                    <div class="meta">2025 - Conference Paper</div>
+                    <h3>Dynamic Query Handling with RAG Fusion for PDF-Based Knowledge Retrieval</h3>
+                    <p>This study explores advancements in Retrieval Augmented Generation (RAG) systems tailored for PDF-based QA featuring RAG fusion...</p>
+                    <a href="https://ieeexplore.ieee.org/abstract/document/11070378" target="_blank">Read Paper &rarr;</a>
                 </article>
 
                 <article class="card">
-                    <div class="meta">2025 - Patent</div>
-                    <h3>AI ENABLED AUDIO PROCESSING PEN FOR TRANSCRIPTION</h3>
-                    <p>SM Sachin Mishra et al. In Patent 189,584.</p>
+                    <div class="meta">2025 - Conference Paper</div>
+                    <h3>TransDFD: A Deepfake Detection System of Mesoscopic Level</h3>
+                    <p>Introduces TransDFD, a novel deepfake detection system developed at the mesoscopic level using MesoNet-4 architecture...</p>
+                    <a href="https://ieeexplore.ieee.org/abstract/document/10984648" target="_blank">Read Paper &rarr;</a>
+                </article>
+
+                <article class="card">
+                    <div class="meta">2025 - Conference Paper</div>
+                    <h3>Automated Detection and Classification of Medicinal Plant Leaf Diseases using CNNs</h3>
+                    <p>A novel, fully automated system for detecting diseases in medicinal plant leaves using deep learning to classify with high accuracy...</p>
+                    <a href="https://ieeexplore.ieee.org/abstract/document/10956946" target="_blank">Read Paper &rarr;</a>
+                </article>
+                
+                <article class="card">
+                    <div class="meta">2024 - Journal Article</div>
+                    <h3>IoT-ML Driven Holistic Health Monitoring and Fitness Assessment</h3>
+                    <p>A novel solution featuring an IoT-ML enabled platform for self-monitoring of health vitals and predicting fitness scores...</p>
+                    <a href="https://ieeexplore.ieee.org/abstract/document/10652387" target="_blank">Read Paper &rarr;</a>
+                </article>
+
+                <article class="card">
+                    <div class="meta">2023 - Book Chapter</div>
+                    <h3>UDR Fused Multimodal Approach for Disease Classification in Large-Scale Datasets</h3>
+                    <p>A holistic strategy for breast cancer multi-class disease classification employing advanced deep learning architectures...</p>
+                    <a href="https://link.springer.com/chapter/10.1007/978-3-031-66410-6_25" target="_blank">Read Paper &rarr;</a>
                 </article>
 
             </div>
@@ -128,13 +174,11 @@
         <section id="works" class="container section reveal">
             <div class="section-title-wrap">
                 <p class="eyebrow">Portfolio</p>
-                <h2>Works and Projects <span class="section-note">(During Undergrad)</span></h2>
+                <h2>Works and Projects</h2>
                 <p class="section-intro">Here are a few projects developed by me, focusing on contextual and functional design.</p>
             </div>
-
-            <button id="toggleProjects" class="toggle-btn" type="button" aria-expanded="false">Show Undergrad Work</button>
-
-            <div id="projectList" class="cards-grid is-hidden">
+            
+            <div class="cards-grid">
                 
                 <div class="card project-card">
                     <img src="./img/fintech.PNG" alt="Finance Tracker">
@@ -197,7 +241,7 @@
                     </div>
                 </div>
                 
-                <form class="contact-form" action="mailto:Sachin.Mishra@iiitb.ac.in" method="POST" enctype="text/plain">
+                <form class="contact-form" action="https://formspree.io/f/mqazkzzk" method="POST">
                     <label>
                         Your Name
                         <input type="text" name="name" required placeholder="John Doe">
@@ -216,12 +260,11 @@
         </section>
     </main>
 
-    <button id="scrollTop" class="scroll-top" type="button" aria-label="Scroll to top">Top</button>
-
     <footer class="container site-footer">
         <div class="footer-wrap">
             <div class="footer-left">
-                <span class="footer-name">Sachin Mishra</span> &copy; <span id="currentYear"></span>
+                <span class="brand-badge" style="display:inline-flex; width: 20px; height: 20px; font-size: 0.6rem;">SM</span> 
+                <span style="font-weight:700; color: #fff; margin-left: 0.5rem;">Sachin Mishra</span> &copy; <span id="currentYear"></span>
             </div>
             <div class="footer-right">
                 <a href="https://github.com/Imsachin010" target="_blank">GitHub</a> &bull;
@@ -234,3 +277,7 @@
     <script src="./modern.js"></script>
 </body>
 </html>
+"""
+
+with open('index.html', 'w', encoding='utf-8') as f:
+    f.write(html_template)
