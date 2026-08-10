@@ -129,3 +129,46 @@ if (scrollTopButton) {
     window.scrollTo({ top: 0, behavior: "smooth" });
   });
 }
+
+const contactForm = document.getElementById("contactForm");
+const contactSubmitBtn = document.getElementById("contactSubmitBtn");
+const contactFormStatus = document.getElementById("contactFormStatus");
+
+if (contactForm && contactSubmitBtn && contactFormStatus) {
+  contactForm.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    contactSubmitBtn.disabled = true;
+    contactSubmitBtn.textContent = "Sending Message...";
+    contactFormStatus.style.display = "block";
+    contactFormStatus.style.color = "#9eb2d3";
+    contactFormStatus.textContent = "Sending your message...";
+
+    const formData = new FormData(contactForm);
+
+    try {
+      const response = await fetch("https://formsubmit.co/ajax/007mishrasachinmishra@gmail.com", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Accept": "application/json"
+        },
+        body: JSON.stringify(Object.fromEntries(formData.entries()))
+      });
+
+      if (response.ok) {
+        contactFormStatus.style.color = "#2dd4bf";
+        contactFormStatus.textContent = "✓ Message sent successfully! Thank you for reaching out.";
+        contactForm.reset();
+      } else {
+        contactFormStatus.style.color = "#f87171";
+        contactFormStatus.textContent = "Failed to send message. Please try sending directly to 007mishrasachinmishra@gmail.com";
+      }
+    } catch (err) {
+      contactFormStatus.style.color = "#f87171";
+      contactFormStatus.textContent = "Failed to send message. Please try sending directly to 007mishrasachinmishra@gmail.com";
+    } finally {
+      contactSubmitBtn.disabled = false;
+      contactSubmitBtn.textContent = "Send Message";
+    }
+  });
+}

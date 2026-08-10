@@ -116,6 +116,16 @@
                 </article>
 
                 <article class="card">
+                    <div class="meta">2026 - Conference Paper</div>
+                    <h3>Automated Assessment of Rooftop Solar Energy Potential Using Deep Learning-Driven Building Footprint Extraction Model</h3>
+                    <p>In <em>Advanced Computing and Communications: Technologies for a Sustainable Future</em>, Springer (First Online: 03 June 2026, pp. 99–114).</p>
+                    <div class="card-links">
+                        <a href="https://rdcu.be/fy09Z" target="_blank">Read Paper &rarr;</a>
+                        <a href="https://link.springer.com/chapter/10.1007/978-3-032-26269-1_7" target="_blank">DOI</a>
+                    </div>
+                </article>
+
+                <article class="card">
                     <div class="meta">2025 - Patent</div>
                     <h3>AI ENABLED AUDIO PROCESSING PEN FOR TRANSCRIPTION</h3>
                     <p>SM Sachin Mishra et al. In Patent 189,584.</p>
@@ -197,7 +207,11 @@
                     </div>
                 </div>
                 
-                <form class="contact-form" action="mailto:Sachin.Mishra@iiitb.ac.in" method="POST" enctype="text/plain">
+                <form id="contactForm" class="contact-form" action="https://formsubmit.co/007mishrasachinmishra@gmail.com" method="POST">
+                    <input type="hidden" name="_subject" value="New Portfolio Contact Message!">
+                    <input type="hidden" name="_template" value="table">
+                    <input type="hidden" name="_captcha" value="false">
+                    
                     <label>
                         Your Name
                         <input type="text" name="name" required placeholder="John Doe">
@@ -210,7 +224,8 @@
                         Message
                         <textarea name="message" rows="4" required placeholder="Hello..."></textarea>
                     </label>
-                    <button type="submit" class="btn btn-primary" style="margin-top: 1rem; width: 100%;">Send Message</button>
+                    <button id="contactSubmitBtn" type="submit" class="btn btn-primary" style="margin-top: 1rem; width: 100%;">Send Message</button>
+                    <div id="contactFormStatus" style="margin-top: 0.8rem; font-size: 0.88rem; display: none; text-align: center;"></div>
                 </form>
             </div>
         </section>
