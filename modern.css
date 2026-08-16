@@ -725,9 +725,9 @@ img {
 .contact-wrap {
   margin-top: 1.2rem;
   display: grid;
-  gap: 1rem;
-  grid-template-columns: 0.9fr 1.1fr;
-  align-items: start;
+  gap: 2.2rem;
+  grid-template-columns: 0.95fr 1.05fr;
+  align-items: center;
 }
 
 .contact-wrap p {
@@ -829,7 +829,7 @@ img {
 }
 
 .is-hidden {
-  display: none;
+  display: none !important;
 }
 
 .reveal.is-visible {

@@ -51,10 +51,107 @@
             <div class="section-title-wrap">
                 <p class="eyebrow">Research</p>
                 <h2>Publications</h2>
-                <p class="section-intro">Full list of publications, papers, and patents.</p>
+                <p class="section-intro">Full list of publications, preprints, and patents.</p>
             </div>
 
-            <div class="timeline-container">
+            <!-- Under Review Section -->
+            <div class="pub-subsection" style="margin-top: 2rem; margin-bottom: 3.5rem;">
+                <div class="pub-subsection-header" style="display: flex; align-items: center; gap: 0.8rem; margin-bottom: 1.8rem; border-bottom: 1px solid rgba(255, 255, 255, 0.08); padding-bottom: 0.8rem;">
+                    <h3 style="font-size: 1.3rem; font-weight: 700; color: #2dd4bf; font-family: 'Space Grotesk', sans-serif; margin: 0;">
+                        Under Review
+                    </h3>
+                    <span style="font-size: 0.78rem; font-weight: 600; padding: 0.2rem 0.64rem; border-radius: 999px; background: rgba(45, 212, 191, 0.12); color: #2dd4bf; border: 1px solid rgba(45, 212, 191, 0.3);">Preprints & Manuscripts</span>
+                </div>
+
+                <div class="timeline-container">
+
+                    <!-- Under Review Paper 1 -->
+                    <div class="timeline-item">
+                        <div class="timeline-date">2027</div>
+                        <div class="timeline-content">
+                            <h3 class="title">When Sources Disagree: How Language Models Decide What to Trust</h3>
+                            <p class="subtitle">Conference Paper · AAAI 2027 (Under Review)</p>
+                            <p class="description">
+                                Investigates epistemic decision-making, conflict resolution, and trust heuristics in LLMs when multi-source evidence disagrees.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Under Review Paper 2 -->
+                    <div class="timeline-item">
+                        <div class="timeline-date">2026</div>
+                        <div class="timeline-content">
+                            <h3 class="title">Do Vision-Language Models Actually See?</h3>
+                            <p class="subtitle">Journal Article · TMLR (Under Review)</p>
+                            <p class="description">
+                                Critical evaluation of perceptual capabilities, visual reasoning, and representation grounding in modern vision-language models.
+                            </p>
+                            <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-top: 6px;">
+                                <a href="https://openreview.net/forum?id=o9KC3v0pvb" target="_blank" class="project-btn">
+                                    <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                        stroke="currentColor" stroke-width="2">
+                                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                                        <polyline points="14 2 14 8 20 8"></polyline>
+                                    </svg>
+                                    <span>OpenReview</span>
+                                    <svg class="arrow" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                        stroke="currentColor" stroke-width="2">
+                                        <path d="M7 17L17 7M17 7H7M17 7V17"></path>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Under Review Paper 3 -->
+                    <div class="timeline-item">
+                        <div class="timeline-date">2026</div>
+                        <div class="timeline-content">
+                            <h3 class="title">Range: Resource-Aware Non-monotonicity in Generation Efficiency</h3>
+                            <p class="subtitle">Conference Paper · IKDD CODS 2026 (Under Review)</p>
+                            <p class="description">
+                                Introduces resource-aware usable-yield characterizations across model scales for structured generation efficiency.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Under Review Paper 4 -->
+                    <div class="timeline-item">
+                        <div class="timeline-date">2026</div>
+                        <div class="timeline-content">
+                            <h3 class="title">Reliability Resource Tradeoffs in Structured Synthetic Data Generation</h3>
+                            <p class="subtitle">Conference Paper · BDA 2026 (Under Review)</p>
+                            <p class="description">
+                                Profiles multiobjective tradeoffs between validity, GPU energy consumption, and latency in synthetic data generation pipelines.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Under Review Paper 5 -->
+                    <div class="timeline-item">
+                        <div class="timeline-date">2026</div>
+                        <div class="timeline-content">
+                            <h3 class="title">FluxAlloc: Adaptive Dynamic Memory Allocation</h3>
+                            <p class="subtitle">Conference Paper · IEEE DSAA 2026 (Under Review)</p>
+                            <p class="description">
+                                Presents FluxAlloc, a framework that progressively replaces static heuristics with learned allocation policies for adaptive dynamic memory management.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Published Section -->
+            <div class="pub-subsection" style="margin-top: 3.5rem;">
+                <div class="pub-subsection-header" style="display: flex; align-items: center; gap: 0.8rem; margin-bottom: 1.8rem; border-bottom: 1px solid rgba(255, 255, 255, 0.08); padding-bottom: 0.8rem;">
+                    <h3 style="font-size: 1.3rem; font-weight: 700; color: #2dd4bf; font-family: 'Space Grotesk', sans-serif; margin: 0;">
+                        Published
+                    </h3>
+                    <span style="font-size: 0.78rem; font-weight: 600; padding: 0.2rem 0.64rem; border-radius: 999px; background: rgba(45, 212, 191, 0.12); color: #2dd4bf; border: 1px solid rgba(45, 212, 191, 0.3);">Conferences & Workshops</span>
+                </div>
+
+                <div class="timeline-container">
 
                 <!-- Paper 1 -->
                 <div class="timeline-item">
@@ -62,11 +159,10 @@
                     <div class="timeline-content">
                         <h3 class="title">Reliability-Aware Structured Synthetic Data Generation via Schema Enforcement
                             and Layered Repair</h3>
-                        <p class="subtitle">Workshop Paper · ACM SynthAI '26 · Bengaluru, India</p>
+                        <p class="subtitle">Paper · ACM SynthAI @ SIGMOD 2026 · Bengaluru, India</p>
                         <p class="description">
                             Reliability-Aware Structured Synthetic Data Generation via Schema Enforcement and Layered
-                            Repair. In Workshop on Synthetic Data Generation and Management for Building AI Systems
-                            (SynthAI '26), ACM.
+                            Repair. In SynthAI @ SIGMOD 2026 - Workshop on Synthetic Data Generation and Management for Building AI Systems, ACM.
                         </p>
                         <div style="display: flex; gap: 10px; flex-wrap: wrap;">
                             <a href="https://doi.org/10.1145/3814574.3816747" target="_blank" class="project-btn">
@@ -349,6 +445,7 @@
                     </div>
                 </div>
 
+                </div>
             </div>
 
             <!-- Patents Section -->

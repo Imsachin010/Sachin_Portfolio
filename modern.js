@@ -82,17 +82,28 @@ if (currentYear) {
   currentYear.textContent = String(new Date().getFullYear());
 }
 
-const toggleProjects = document.getElementById("toggleProjects");
-const projectList = document.getElementById("projectList");
+function bindToggle(buttonId, containerId, hideText, showText) {
+  const btn = document.getElementById(buttonId);
+  const container = document.getElementById(containerId);
+  if (!btn || !container) return;
 
-if (toggleProjects && projectList) {
-  toggleProjects.addEventListener("click", () => {
-    const willShow = projectList.classList.contains("is-hidden");
-    projectList.classList.toggle("is-hidden", !willShow);
-    toggleProjects.textContent = willShow ? "Hide Undergrad Work" : "Show Undergrad Work";
-    toggleProjects.setAttribute("aria-expanded", String(willShow));
+  btn.addEventListener("click", (e) => {
+    e.preventDefault();
+    const isHidden = container.classList.toggle("is-hidden");
+    if (isHidden) {
+      container.style.display = "none";
+      btn.textContent = showText;
+      btn.setAttribute("aria-expanded", "false");
+    } else {
+      container.style.display = "grid";
+      btn.textContent = hideText;
+      btn.setAttribute("aria-expanded", "true");
+    }
   });
 }
+
+bindToggle("toggleProjects", "projectList", "Hide Undergrad Work", "Show Undergrad Work");
+bindToggle("toggleMastersProjects", "postgradProjectList", "Hide Master's Work", "Show Master's Work");
 
 const sectionLinks = Array.from(document.querySelectorAll(".desktop-nav a[href^='#']"));
 const sectionTargets = sectionLinks

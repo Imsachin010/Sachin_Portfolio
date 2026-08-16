@@ -69,12 +69,18 @@
                 <p class="eyebrow">Discover</p>
                 <h2>About Me</h2>
             </div>
-            <p class="section-intro">
-                I am an MS by Research student in Artificial Intelligence and Data Science with a strong foundation in applied machine learning and deep learning. My work focuses on understanding models beyond surface-level performance, emphasizing objective design, optimization behavior, and evaluation of model reliability.
-            </p>
-            <p class="section-intro" style="margin-top: 1rem;">
-                I have hands-on experience with vision models and ML systems, and a solid theoretical grounding in generative modeling, including loss formulations, KL-divergence, and ELBO-based objectives. I am particularly interested in how optimization principles influence generalization, robustness, and reasoning in modern learning systems, and I aim to transition this understanding toward multimodal and language-based models.
-            </p>
+
+            <div class="about-card-box" style="background: rgba(16, 20, 26, 0.55); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 16px; padding: 1.5rem 1.8rem; margin-bottom: 2rem; display: flex; flex-direction: column; gap: 1rem; width: 100%; box-sizing: border-box;">
+                <p style="margin: 0; font-size: 0.96rem; line-height: 1.65; color: #e8eef9;">
+                    I am an MS by Research student in Artificial Intelligence and Data Science specializing in <strong style="color: #2dd4bf;">AI Alignment, LLM Evaluations, and Resource-Aware ML Systems</strong>. My work focuses on understanding foundation models beyond surface-level performance, emphasizing objective design, optimization behavior, and model reliability.
+                </p>
+                <p style="margin: 0; font-size: 0.96rem; line-height: 1.65; color: #c1c9d5;">
+                    My research focuses on epistemic reasoning in multi-source conflict resolution and building instrumented benchmarks to measure the accuracy-efficiency trade-offs of foundation models. My current MS thesis explores multi-objective optimization and Pareto-frontier analysis to ensure AI systems remain reliable, grounded, and computationally sustainable at scale.
+                </p>
+                <p style="margin: 0; font-size: 0.96rem; line-height: 1.65; color: #9eb2d3;">
+                    I have hands-on experience with vision models and ML systems, alongside a solid theoretical grounding in generative modeling, loss formulations, KL-divergence, and ELBO-based objectives, driving research toward robust, resource-aware multimodal and language-based learning systems.
+                </p>
+            </div>
             
             <div class="timeline">
                 <div class="timeline-item">
@@ -138,13 +144,70 @@
         <section id="works" class="container section reveal">
             <div class="section-title-wrap">
                 <p class="eyebrow">Portfolio</p>
-                <h2>Works and Projects <span class="section-note">(During Undergrad)</span></h2>
-                <p class="section-intro">Here are a few projects developed by me, focusing on contextual and functional design.</p>
+                <h2>Works and Projects</h2>
+                <p class="section-intro">Here are research & engineering projects developed across my Postgrad (Master's) and Undergrad journey.</p>
             </div>
 
-            <button id="toggleProjects" class="toggle-btn" type="button" aria-expanded="false">Show Undergrad Work</button>
+            <!-- Postgrad / Master's Projects -->
+            <div class="project-subsection" style="margin-top: 2rem; margin-bottom: 2.8rem;">
+                <div class="project-subsection-header" style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.25rem; flex-wrap: wrap; gap: 0.8rem;">
+                    <div style="display: flex; align-items: center; gap: 0.6rem;">
+                        <h3 style="font-size: 1.2rem; font-weight: 700; color: #2dd4bf; font-family: 'Space Grotesk', sans-serif; margin: 0;">
+                            Postgrad Projects
+                        </h3>
+                        <span style="font-size: 0.78rem; font-weight: 600; padding: 0.2rem 0.6rem; border-radius: 999px; background: rgba(45, 212, 191, 0.12); color: #2dd4bf; border: 1px solid rgba(45, 212, 191, 0.3);">Master's</span>
+                    </div>
+                    <button id="toggleMastersProjects" class="toggle-btn" type="button" aria-expanded="true" style="margin: 0;">Hide Master's Work</button>
+                </div>
+                
+                <div id="postgradProjectList" class="cards-grid">
+                    
+                    <!-- Master's Project 1 -->
+                    <div class="card project-card">
+                        <div class="meta" style="color: #2dd4bf; font-size: 0.82rem; font-weight: 600; margin-bottom: 0.4rem;">LLM Reasoning & Trust · FSR Benchmark</div>
+                        <h3 style="font-size: 1.12rem; font-weight: 700; color: #ffffff; margin-bottom: 0.6rem; line-height: 1.35;">Reliable Multi-Source Reasoning for LLMs (FSR Benchmark)</h3>
+                        <ul style="padding-left: 1.1rem; margin: 0; color: #9eb2d3; font-size: 0.87rem; line-height: 1.55; display: flex; flex-direction: column; gap: 0.4rem;">
+                            <li>Developed the FSR benchmark comprising 1,000 multi-source fact bundles to evaluate trust, temporal reasoning, and conflict resolution across 7B–72B LLMs using structured metadata.</li>
+                            <li>Investigated how LLMs decide what to trust when sources disagree, identifying a reliance on superficial heuristics and sycophancy over genuine epistemic reasoning.</li>
+                        </ul>
+                    </div>
 
-            <div id="projectList" class="cards-grid is-hidden">
+                    <!-- Master's Project 2 -->
+                    <div class="card project-card">
+                        <div class="meta" style="color: #2dd4bf; font-size: 0.82rem; font-weight: 600; margin-bottom: 0.4rem;">Zeus-ML Profiling · LLaMA-3 8B</div>
+                        <h3 style="font-size: 1.12rem; font-weight: 700; color: #ffffff; margin-bottom: 0.6rem; line-height: 1.35;">Reliability-Resource Tradeoffs in Structured Synthetic Data</h3>
+                        <ul style="padding-left: 1.1rem; margin: 0; color: #9eb2d3; font-size: 0.87rem; line-height: 1.55; display: flex; flex-direction: column; gap: 0.4rem;">
+                            <li>Instrumented a LLaMA-3 8B pipeline with Zeus-ML across 1,980 generation calls to profile multiobjective tradeoffs among validity, GPU energy, and latency.</li>
+                            <li>Demonstrated that schema enforcement with repair reduces GPU energy consumption by 47.9% and latency significantly.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Master's Project 3 -->
+                    <div class="card project-card">
+                        <div class="meta" style="color: #2dd4bf; font-size: 0.82rem; font-weight: 600; margin-bottom: 0.4rem;">Resource Efficiency · 1.5B–72B Models</div>
+                        <h3 style="font-size: 1.12rem; font-weight: 700; color: #ffffff; margin-bottom: 0.6rem; line-height: 1.35;">RANGE: Resource-Aware Generation Efficiency</h3>
+                        <ul style="padding-left: 1.1rem; margin: 0; color: #9eb2d3; font-size: 0.87rem; line-height: 1.55; display: flex; flex-direction: column; gap: 0.4rem;">
+                            <li>Introduced an instrumented characterization framework with a usable-yield metric family (UR/J, UR/$, UR/s) applied to ten models (1.5B–72B).</li>
+                            <li>Discovered a format-dependent "CSV scale-efficiency penalty," proving that larger models consume disproportionately more energy for structured generation despite higher success rates.</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Undergrad Projects -->
+            <div class="project-subsection">
+                <div class="project-subsection-header" style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.25rem; flex-wrap: wrap; gap: 0.8rem;">
+                    <div style="display: flex; align-items: center; gap: 0.6rem;">
+                        <h3 style="font-size: 1.2rem; font-weight: 700; color: #2dd4bf; font-family: 'Space Grotesk', sans-serif; margin: 0;">
+                            Undergrad Projects
+                        </h3>
+                        <span style="font-size: 0.78rem; font-weight: 600; padding: 0.2rem 0.6rem; border-radius: 999px; background: rgba(45, 212, 191, 0.12); color: #2dd4bf; border: 1px solid rgba(45, 212, 191, 0.3);">B.Tech</span>
+                    </div>
+                    <button id="toggleProjects" class="toggle-btn" type="button" aria-expanded="false" style="margin: 0;">Show Undergrad Work</button>
+                </div>
+
+                <div id="projectList" class="cards-grid is-hidden">
                 
                 <div class="card project-card">
                     <img src="./img/fintech.PNG" alt="Finance Tracker">
@@ -180,30 +243,23 @@
                     <p>Startup networking & collaboration platform.</p>
                     <a href="https://startup-connekt-fe.vercel.app/" target="_blank">View Project &rarr;</a>
                 </div>
-
-                <div class="card project-card">
-                    <img src="./img/icon.png" alt="Health Monitoring">
-                    <h3>ML Health Monitoring App</h3>
-                    <p>Smart health tracking with machine learning.</p>
-                    <a href="https://github.com/Imsachin010/Smart-Health-Tracking-App" target="_blank">View Project &rarr;</a>
-                </div>
-
             </div>
         </section>
 
         <!-- Contact -->
         <section id="contact" class="container section reveal">
-            <div class="section-title-wrap">
-                <p class="eyebrow">Connect</p>
-                <h2>Let's Talk</h2>
-            </div>
-            
             <div class="contact-wrap">
-                <div class="contact-info">
-                    <p>I typically respond within 24-48 hours. Looking forward to connecting with you!</p>
-                    <div style="margin-top: 1.5rem; display: flex; flex-direction: column; gap: 0.5rem;">
-                        <a href="mailto:Sachin.Mishra@iiitb.ac.in">Sachin.Mishra@iiitb.ac.in</a>
-                        <a href="mailto:007mishrasachinmishra@gmail.com">007mishrasachinmishra@gmail.com</a>
+                <div class="contact-info" style="display: flex; flex-direction: column; justify-content: center;">
+                    <div class="section-title-wrap" style="margin-bottom: 1.2rem;">
+                        <p class="eyebrow">Connect</p>
+                        <h2 style="font-size: 2.2rem; font-weight: 700; margin: 0; line-height: 1.2;">Let's Talk</h2>
+                    </div>
+                    <p style="font-size: 0.95rem; line-height: 1.6; color: #9eb2d3; max-width: 42ch;">
+                        I typically respond within 24-48 hours. Looking forward to connecting with you!
+                    </p>
+                    <div style="margin-top: 1.4rem; display: flex; flex-direction: column; gap: 0.6rem;">
+                        <a href="mailto:Sachin.Mishra@iiitb.ac.in" style="color: #2dd4bf; font-weight: 600; text-decoration: none; font-size: 0.96rem;">Sachin.Mishra@iiitb.ac.in</a>
+                        <a href="mailto:007mishrasachinmishra@gmail.com" style="color: #2dd4bf; font-weight: 600; text-decoration: none; font-size: 0.96rem;">007mishrasachinmishra@gmail.com</a>
                     </div>
                 </div>
                 
